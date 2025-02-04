@@ -31,7 +31,7 @@ The Number Classification API is a simple Express-based application that provide
 
 ## Installation
 
-To run the application, clone the repository and install the dependencies:
+To run the application locally, clone the repository and install the dependencies:
 
 ```bash
 npm install
@@ -46,3 +46,4 @@ node server.js
 ```
 
 You can then send requests to the API using tools like Postman or cURL.
+Alternatively you can use this URL(https://number-classification-api-cy4a.onrender.com/api/numberClassification/<enter a number here>) to get responses from the API without running the server application on your local machine.
