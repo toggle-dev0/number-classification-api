@@ -4,9 +4,9 @@ const axios = require("axios");
 const numberEval = require("../utilities/numberEval");
 
 router.get("/", async (req, res) => {
-  let { num } = req.query;
+  let { number } = req.query;
 
-  if (isNaN(Number(num))) {
+  if (isNaN(Number(number))) {
     let info = {
       number: "alphabet",
       error: "true",
@@ -16,23 +16,23 @@ router.get("/", async (req, res) => {
   }
 
   let properties = [];
-  if (numberEval.armstrongNum(num)) {
+  if (numberEval.armstrongNum(number)) {
     properties.push("armstrong");
   }
-  let even_or_odd = numberEval.numIsEven(Number(num)) ? "even" : "odd";
+  let even_or_odd = numberEval.numIsEven(Number(number)) ? "even" : "odd";
   properties.push(even_or_odd);
   let fun_fact = "";
   try {
-    let res = await axios.get(`http://numbersapi.com/${num}/math`);
+    let res = await axios.get(`http://numbersapi.com/${number}/math`);
     fun_fact = res.data;
   } catch (error) {
     fun_fact = "There is no fun fact about this number 😭";
   }
   let info = {
-    number: num,
-    is_prime: numberEval.numIsPrime(Number(num)),
-    is_perfect: numberEval.numIsPerfect(Number(num)),
-    digit_sum: numberEval.sumOfDigits(num),
+    number: number,
+    is_prime: numberEval.numIsPrime(Number(number)),
+    is_perfect: numberEval.numIsPerfect(Number(number)),
+    digit_sum: numberEval.sumOfDigits(number),
     properties: properties,
     fun_fact: fun_fact,
   };
