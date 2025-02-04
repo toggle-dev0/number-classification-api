@@ -46,4 +46,4 @@ node server.js
 ```
 
 You can then send requests to the API using tools like Postman or cURL.
-Alternatively you can use this URL(https://number-classification-api-cy4a.onrender.com/api/numberClassification/<enter a number here>) to get responses from the API without running the server application on your local machine.
+Alternatively you can use this URL(https://number-classification-api-cy4a.onrender.com/api/numberClassification/:enter_a_number_here) to get responses from the API without running the server application on your local machine.
