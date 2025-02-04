@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Making use of the numberClassification.js route file
-app.use("/api/numberClassification", numberClassification);
+app.use("/api/classify-number", numberClassification);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
