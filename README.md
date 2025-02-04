@@ -18,8 +18,7 @@ The Number Classification API is a simple Express-based application that provide
 
 2. **Routes**:
 
-   - **GET /api/numberClassification**: Returns a simple message indicating that the server is active.
-   - **POST /api/numberClassification/:num**: Accepts a number as a parameter and returns a JSON response with the following information:
+   - **GET /api/classify-number?number=num** Accepts a number as a parameter and returns a JSON response with the following information:
      - The original number
      - Whether the number is prime
      - Whether the number is a perfect square
@@ -46,4 +45,4 @@ node server.js
 ```
 
 You can then send requests to the API using tools like Postman or cURL.
-Alternatively you can use this URL(https://number-classification-api-cy4a.onrender.com/api/numberClassification/:enter_a_number_here) to get responses from the API using a HTTP Client (Insomia, Postman, etc) without running the server application on your local machine.
+Alternatively you can use this URL(https://number-classification-api-cy4a.onrender.com/api/classify-number?number=[enter_your_number_here]) to get responses from the API using a HTTP Client (Insomia, Postman, etc) without running the server application on your local machine.
