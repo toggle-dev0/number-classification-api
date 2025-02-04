@@ -3,12 +3,9 @@ const router = express.Router();
 const axios = require("axios");
 const numberEval = require("../utilities/numberEval");
 
-router.get("/", (req, res) => {
-  res.status(200).json({ message: "Hello, server is up and active!" });
-});
+router.get("/", async (req, res) => {
+  let { num } = req.query;
 
-router.post("/:num", async (req, res) => {
-  let num = req.params.num;
   if (isNaN(Number(num))) {
     let info = {
       number: "alphabet",

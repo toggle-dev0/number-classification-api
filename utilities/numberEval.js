@@ -9,6 +9,9 @@ let numIsEven = (num) => {
 /* Returns the sum of the digits that make up the number e.g num = 11, sum = 1 + 1 = 2
  */
 let sumOfDigits = (num) => {
+  if (String(num)[0] === "-") {
+    num = String(num).replace("-", "");
+  }
   return String(num)
     .split("")
     .reduce((sum, digit) => Number(sum) + Number(digit), 0);
